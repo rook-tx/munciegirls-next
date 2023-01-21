@@ -1,0 +1,39 @@
+@import "./variables";
+
+.main {
+  height: 100%;
+}
+
+.tour {
+	background-color: $darkblue;
+	background-image: url('/images/bg-dark.jpg');
+	padding: 0;
+
+	.scroll-content {
+		min-height: 100%;
+		@include pad(4,1);
+  }
+
+  h1 {
+    color: $w;
+  }
+}
+
+.content {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+.bg {
+	background: radial-gradient(rgba($b,.25), rgba($b,0));
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}

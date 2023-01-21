@@ -1,0 +1,44 @@
+@import "@/styles/_variables";
+
+.item,
+.logo {
+	display: inline-block;
+	@include fs(mp(0) + 3);
+	vertical-align: top;
+	letter-spacing: .05em;
+	transition: transform 500ms $easeOutCubic;
+}
+
+.item {
+	background: var(--yellow);
+	color: var(--darkblue);
+	@include mgn(.375,.25);
+	@include pad(.25,.5);
+
+	/* for n in (2..5)
+		&:nth-child({n})
+			transition-delay n*100ms */
+
+	&.spoof-active,
+	&.router-link-exact-active {
+		background: $w;
+  }
+}
+
+.logo {
+  background: none;
+  border: 0;
+  @include mgn(0,.25,.25,0);
+  @include pad(.125,.25);
+  transform: rotateZ(0deg);
+
+  @include below($tablet) {
+    margin: 0;
+	}
+
+  img {
+    display: block;
+    height: $let*2rem;
+    width: auto;
+  }
+}

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Muncie Girls</title>
+        <title>Contact | Muncie Girls</title>
       </Head>
       <main className={styles.main}>
         <div className='home page' />

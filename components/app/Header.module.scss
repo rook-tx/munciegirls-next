@@ -1,0 +1,14 @@
+@import "@/styles/_variables";
+
+.nav {
+	left: 0;
+	position: fixed;
+	top: 0;
+	white-space: nowrap;
+	width: 100%;
+	z-index: 10;
+
+	@include above($tablet) {
+		@include pad(0,.5)
+	}
+}

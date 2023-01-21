@@ -1,0 +1,60 @@
+// ----------
+// Colours
+// ----------
+
+$b: #000;
+$w: #fff;
+
+$black: #080b0b;
+$teal: #3e838b;
+$red: #d62413;
+
+$blue: #084e8b;
+$lightblue: lighten($blue,20%);
+$darkblue: #063660;
+
+$yellow: #fdf46b;
+
+$blk: darken($darkblue,20%);
+
+$bebas: 'Bebas Neue', sans-serif;
+
+
+// ----------
+// Fonts
+// ----------
+
+$bebas: 'Bebas Neue', sans-serif;
+
+// ----------
+// Mixins
+// ----------
+
+@mixin bg() {
+	background: $blue url('/images/bg.jpg') repeat center;
+	background-size: (3258px / 2) (1410px / 2);
+}
+
+
+// ----------
+// Breakpoints
+// ----------
+
+$mobile     : 640px;
+$tablet     : 864px;
+$desktop    : 1200px;
+
+@mixin above($size) {
+	@media screen and (min-width: ($size + 1)) {
+		@content;
+  }
+}
+
+@mixin below($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  } 
+}
+
+@import "./ease";
+@import "./type";

@@ -1,0 +1,46 @@
+@import "./_variables";
+
+:root {
+  --b: #{$b};
+  --w: #{$w};
+
+  --black: #{$black};
+  --teal: #{$teal};
+  --red: #{$red};
+
+  --blue: #{$blue};
+  --lightblue: #{$lightblue};
+  --darkblue: #{$darkblue};
+
+  --yellow: #{$yellow};
+
+  --blk: #{$blk};
+
+  --bebas: #{$bebas};
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  background: var(--darkblue);
+  color: var(--yellow);
+  font-family: var(--bebas);
+}
+
+html {
+	font-size: ($p/16)*75%;
+
+	@include above($tablet) {
+		font-size: ($p/16)*100%
+  }
+}
+
+body {
+  font-size: 100%;
+	letter-spacing: .04em
+}
+
+@import "./_app"
