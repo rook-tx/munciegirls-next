@@ -121,3 +121,37 @@ button, [type=submit] {
 	@include pad(0,0,4);
 	overflow: hidden;
 }
+
+.cta {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+
+	a {
+		background: radial-gradient(closest-side, $darkblue, $blue);
+		border: 1px solid $yellow;
+		border-radius: 3px;
+		box-shadow: 0 .25em 1em rgba($b,.3);
+		display: inline-block;
+		@include fs(mp(1));
+		letter-spacing: .05em;
+		@include pad(.5,1);
+		@include mgn(1,.5);
+
+		@include above($tablet) {
+			@include pad(.5,1.5)
+		}
+	}	
+
+	.second {
+		background: none;
+		border-color: lighten($blue,20%);
+
+		@include above($tablet) {
+			margin-left: $gut*1em;
+		}
+	}
+}

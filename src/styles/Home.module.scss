@@ -1,0 +1,72 @@
+@import '@/styles/_variables';
+
+.home {
+	background-color: $darkblue;
+	background-image: url('/images/bg-dark.jpg');
+	
+	h1 {
+		opacity: 0;
+		position: absolute;
+	}
+}
+
+.main {
+	height: 100%;
+}
+
+.bg {
+	background: radial-gradient(rgba($b,.4), rgba($b,0));
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.album {
+	height: 70vmin;
+	left: 50%;
+	perspective: 100vw;
+	position: absolute;
+	top: 50%;
+	transform: translate3d(-50%,-55%,50px);
+	transform-style: preserve-3d;
+	width: 70vmin;
+	z-index: 2;
+}
+
+.image {
+	background: rgba($blue,.1);
+	box-shadow: 0 0 1em rgba($b,.2);
+	height: 0;
+	padding-bottom: 100%;
+	position: relative;
+	transition: transform .5s ease-out;
+	width: 100%;
+
+	img {
+		display: block;
+		height: 100%;
+		position: absolute;
+		width: 100%
+	}
+}
+
+.preorder, 
+.second {
+	transform: rotateZ((random() - 0.5) * 6deg);
+	transition: transform 600ms $easeOutCubic;
+
+	.v-enter-active &, .up-enter-active &, .down-enter-active &{
+		transition-delay: 600ms;
+	}
+
+	.v-enter &, .up-enter &, .down-enter & {
+		transform: rotateZ(0deg)
+	}	
+}
+
+.second {
+	background: $darkblue;
+}

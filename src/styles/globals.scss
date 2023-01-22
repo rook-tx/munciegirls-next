@@ -43,4 +43,8 @@ body {
 	letter-spacing: .04em
 }
 
+div {
+  box-sizing: border-box;
+}
+
 @import "./_app"
