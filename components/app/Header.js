@@ -1,5 +1,6 @@
 import styles from './Header.module.scss'
 import NavItem from './NavItem'
+import Socials from './Socials'
 
 export default function Header() {
 
@@ -30,6 +31,8 @@ export default function Header() {
           link={item}
         />
       )) }
+
+      <Socials />
     </nav>
   )
 }

@@ -1,0 +1,37 @@
+@import "@/styles/variables";
+
+.socials {
+	bottom: 0;
+	@include pad(0,.5);
+	position: absolute;
+	right: 0;
+	white-space: nowrap;
+
+	@include below($tablet) {
+		left: 0;
+		top: 100%;
+		text-align: right;
+  }
+
+  a {
+    display: inline-block;
+    @include pad(.5,.5);
+    vertical-align: top;
+  
+    @include above($tablet) {
+      @include pad(1,.5)
+    }
+  }
+  
+  svg {
+    display: block;
+    height: 1em;
+    fill: $yellow;
+    max-width: 1.1em;
+    width: auto;
+
+    @include below($tablet) {
+      fill: lighten($yellow,30%)
+    }
+  }
+}
