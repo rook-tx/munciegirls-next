@@ -8,7 +8,7 @@
 	padding: 0;
 
 	h2, p {
-		@for $i from 1 through 4 {
+		@for $i from 1 through 6 {
 			&:nth-child(#{$i}) {
 				transform: rotateZ((random() - 0.5) * 6deg);
 			}
@@ -40,7 +40,7 @@
 	}
 	
 	h3 {
-		color: $w;
+		color: $white;
 		@include fs(mp(2));
 		@include mgn(.5,auto);
 		text-transform: none;
@@ -59,7 +59,7 @@
 	
 		a {
 			border-bottom: 1px solid $yellow;
-			color: $w;
+			color: $white;
 			display: inline-block;
 			vertical-align: top;
 		}

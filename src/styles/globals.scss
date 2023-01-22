@@ -4,10 +4,6 @@
   --b: #{$b};
   --w: #{$w};
 
-  --black: #{$black};
-  --teal: #{$teal};
-  --red: #{$red};
-
   --blue: #{$blue};
   --lightblue: #{$lightblue};
   --darkblue: #{$darkblue};
@@ -15,6 +11,7 @@
   --yellow: #{$yellow};
 
   --blk: #{$blk};
+  --white: #{$white};
 
   --bebas: #{$bebas};
 }
@@ -27,7 +24,7 @@ html, body {
 html {
   background: var(--darkblue);
   color: var(--yellow);
-  font-family: var(--bebas);
+  // font-family: var(--bebas);
 }
 
 html {

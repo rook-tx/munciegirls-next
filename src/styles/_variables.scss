@@ -5,10 +5,6 @@
 $b: #000;
 $w: #fff;
 
-$black: #080b0b;
-$teal: #3e838b;
-$red: #d62413;
-
 $blue: #084e8b;
 $lightblue: lighten($blue,20%);
 $darkblue: #063660;
@@ -16,9 +12,7 @@ $darkblue: #063660;
 $yellow: #fdf46b;
 
 $blk: darken($darkblue,20%);
-
-$bebas: 'Bebas Neue', sans-serif;
-
+$white: lighten($yellow,24%);
 
 // ----------
 // Fonts

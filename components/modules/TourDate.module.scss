@@ -32,7 +32,7 @@
 	a {
 		border: 1px solid lighten($lightblue,15%);
 		border-radius: 2px;
-		color: $w;
+		color: $white;
 		display: inline-block;
 		letter-spacing: .06em;
 		@include mgn(.5,-.5,1);
@@ -44,8 +44,8 @@
 			border-color: $yellow;
 
 			&:hover {
-				background: rgba($w,.1);
-				border-color: $w;
+				background: rgba($white,.1);
+				border-color: $white;
       }
     }
   }
