@@ -24,35 +24,6 @@
 	z-index: 1;
 }
 
-.album {
-	height: 70vmin;
-	left: 50%;
-	perspective: 100vw;
-	position: absolute;
-	top: 50%;
-	transform: translate3d(-50%,-55%,50px);
-	transform-style: preserve-3d;
-	width: 70vmin;
-	z-index: 2;
-}
-
-.image {
-	background: rgba($blue,.1);
-	box-shadow: 0 0 1em rgba($b,.2);
-	height: 0;
-	padding-bottom: 100%;
-	position: relative;
-	transition: transform .5s ease-out;
-	width: 100%;
-
-	img {
-		display: block;
-		height: 100%;
-		position: absolute;
-		width: 100%
-	}
-}
-
 .preorder, 
 .second {
 	transform: rotateZ((random() - 0.5) * 6deg);

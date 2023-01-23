@@ -24,15 +24,21 @@ export default function Header() {
   ]
 
   return (
-    <nav className={styles.nav}>
-      { nav.map((item) => (
-        <NavItem
-          key={item.link}
-          link={item}
-        />
-      )) }
+    <header>
+      <div className={styles.header}>
+        <nav className={styles.nav}>
+          <ul className={styles.navList}>
+            { nav.map((item) => (
+              <NavItem
+                key={item.link}
+                link={item}
+              />
+            )) }
+          </ul>
+        </nav>
 
-      <Socials />
-    </nav>
+        <Socials />
+      </div>
+    </header>
   )
 }

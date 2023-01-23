@@ -19,41 +19,46 @@ export default function NavItem({ link }) {
   }, [ router.pathname ])
 
   return (
-    link.name === 'Muncie Girls' ?
-      <Link
-        href={link.link}
-        className={styles.logo}
-        title="Home">
-        <Image
-          src="/images/logo.png"
-          alt="Muncie Girls"
-          height="160"
-          width="450"
-          priority
-        />
-      </Link>
-      : RegExp('http').test(link.link) ?
-        <a
-          href={link.link}
-          target="_blank"
-          rel="noreferrer"
-          className={styles.item}
-          style={{
-            transform: `rotateZ(${spin}deg)`
-          }}>
-          {link.name}
-        </a>
-        :
-        <Link
-          href={link.link}
-          className={styles.item}
-          // className={
-          // 	'spoof-active': link.link.includes('merch') && ($route.path.includes('product') || $route.path.includes('merch') || $route.path.includes('cart'))
-          // }
-          style={{
-            transform: `rotateZ(${spin}deg)`
-          }}
-        >{link.name}
-        </Link>
+    <li className={styles.navItem}>
+      {
+        link.name === 'Muncie Girls' ?
+          <Link
+            href={link.link}
+            className={styles.logo}
+            title="Home">
+            <Image
+              src="/images/logo.png"
+              alt="Muncie Girls"
+              height="53"
+              width="150"
+              priority
+            />
+          </Link> :
+
+          RegExp('http').test(link.link) ?
+            <Link
+              href={link.link}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.item}
+              style={{
+                transform: `rotateZ(${spin}deg)`
+              }}
+            >
+              {link.name}
+            </Link> :
+
+            <Link
+              href={link.link}
+              className={`${styles.item} ${router.pathname == link.link ? styles['spoof-active'] : ''}`}
+              // 	'spoof-active': link.link.includes('merch') && ($route.path.includes('product') || $route.path.includes('merch') || $route.path.includes('cart'))
+              style={{
+                transform: `rotateZ(${spin}deg)`
+              }}
+            >
+              {link.name}
+            </Link>
+      }
+    </li>
   )
 }

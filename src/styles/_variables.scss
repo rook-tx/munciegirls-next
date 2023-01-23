@@ -11,14 +11,16 @@ $darkblue: #063660;
 
 $yellow: #fdf46b;
 
-$blk: darken($darkblue,20%);
-$white: lighten($yellow,24%);
+$blk: darken($darkblue, 20%);
+$white: lighten($yellow, 25%);
+
 
 // ----------
 // Fonts
 // ----------
 
 $bebas: 'Bebas Neue', sans-serif;
+
 
 // ----------
 // Mixins
@@ -49,6 +51,7 @@ $desktop    : 1200px;
     @content;
   } 
 }
+
 
 @import "./ease";
 @import "./type";

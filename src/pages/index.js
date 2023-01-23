@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.scss'
-import Image from 'next/image'
 import Link from 'next/link'
+import AlbumTilt from 'components/sections/AlbumTilt'
 
 export default function Home() {
   return (
@@ -15,16 +15,7 @@ export default function Home() {
 
           <div className={styles.bg} />
 
-          <div className={styles.album}>
-            <div className={styles.image}>
-              <Image
-                alt="Fixed Ideals album cover"
-                src="/images/fixed_ideals_cover.jpg"
-                width="1464"
-                height="1464"
-              />
-            </div>
-          </div>
+          <AlbumTilt />
 
           <div className="cta">
             <a className={styles.preorder}

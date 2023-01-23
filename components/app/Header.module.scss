@@ -1,6 +1,6 @@
 @import "@/styles/_variables";
 
-.nav {
+.header {
 	left: 0;
 	position: fixed;
 	top: 0;
@@ -11,4 +11,9 @@
 	@include above($tablet) {
 		@include pad(0,.5)
 	}
+}
+
+ul.navList {
+	padding: 0;
+	margin: 0;
 }

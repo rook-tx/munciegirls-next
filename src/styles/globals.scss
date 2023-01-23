@@ -24,7 +24,6 @@ html, body {
 html {
   background: var(--darkblue);
   color: var(--yellow);
-  // font-family: var(--bebas);
 }
 
 html {
@@ -40,7 +39,7 @@ body {
 	letter-spacing: .04em
 }
 
-a, nav, div {
+a, div {
   box-sizing: border-box;
 }
 
