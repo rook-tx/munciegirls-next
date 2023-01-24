@@ -1,6 +1,6 @@
 import styles from './Header.module.scss'
-import NavItem from './NavItem'
-import Socials from './Socials'
+import NavItem from '../modules/NavItem'
+import Socials from '../modules/Socials'
 
 export default function Header() {
 

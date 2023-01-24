@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/Contact.module.scss'
 import Link from 'next/link'
+import Stars from 'components/app/Stars'
 
 export default function Home() {
   return (
@@ -57,6 +58,8 @@ export default function Home() {
           </div>
 
           <div className={styles.bg} />
+
+          <Stars />
         </div>
       </main>
     </>

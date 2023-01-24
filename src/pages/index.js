@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.scss'
 import Link from 'next/link'
 import AlbumTilt from 'components/sections/AlbumTilt'
+import Stars from 'components/app/Stars'
 
 export default function Home() {
   return (
@@ -32,6 +33,8 @@ export default function Home() {
               Buy tickets
             </Link>
           </div>
+
+          <Stars />
         </div>
       </main>
     </>

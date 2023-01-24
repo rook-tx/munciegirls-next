@@ -1,0 +1,42 @@
+@import "@/styles/variables";
+
+.s {
+	pointer-events: none;
+	position: absolute;
+	z-index: 0;
+
+	img {
+		opacity: 1;
+		transform: scale(0.4) rotateZ(0deg);
+		transition: transform 1000ms $easeOutCubic;
+		transition-property: opacity, transform;
+		max-width: 17vmin;
+
+		@include below($tablet) {
+			max-width: 20vmin
+    }
+
+		.v-enter &,
+		.up-enter &,
+		.down-enter & {
+			opacity: 0;
+			transform: scale(0.1) rotateZ(-15deg)
+    }
+  }
+
+	@for $n from 1 through 40 {
+		&-#{$n} {
+			img {
+				transition-delay: 500 + $n * 100ms
+      }
+    }
+  }
+}
+
+.enter {
+  img {
+    opacity: 0;
+    transform: scale(0.1) rotateZ(-15deg);
+    transition-delay: 0ms
+  }
+}

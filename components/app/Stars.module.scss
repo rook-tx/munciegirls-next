@@ -1,0 +1,40 @@
+@import "@/styles/variables";
+
+.stars {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%; 
+}
+
+.simg {
+	opacity: 1;
+	transform: scale(0.4) rotateZ(0deg);
+	transition: transform 1000ms $easeOutCubic;
+	transition-property: opacity, transform;
+	max-width: 17vmin;
+
+	@include below($tablet) {
+		max-width: 20vmin
+	}
+}
+
+.s {
+	pointer-events: none;
+	position: absolute;
+	z-index: 0;
+
+	@for $n from 1 through 40 {
+		&-#{$n} {
+			transition-delay: 500 + $n * 100ms
+    }
+  }
+}
+
+.enter {
+	opacity: 0;
+	transform: scale(0.1) rotateZ(-15deg);
+	transition-delay: 0ms
+}
