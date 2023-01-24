@@ -81,7 +81,7 @@ export default function Stars() {
           className={`${styles.s}`}
         >
           <img
-            className={`${styles.simg} ${styles[`s-${idx + 1}`]} ${refresh ? styles.enter : ''}`}
+            className={`${styles.simg} ${styles[`s-${idx + 1}`]} ${refresh ? styles.enter : styles.leave}`}
             src={`/images/stars/star-${star.ridx}.png`}
             alt=""
           />
