@@ -10,14 +10,15 @@
 }
 
 .simg {
-	opacity: 1;
-	transform: scale(0.4) rotateZ(0deg);
+	// opacity: 1;
+	// transform: translate3d(-50%,-50%,0) scale(1) rotateZ(0deg);
 	transition: transform 1000ms $easeOutCubic;
 	transition-property: opacity, transform;
-	max-width: 17vmin;
+	width: 4vmin;
+	// width: ;
 
 	@include below($tablet) {
-		max-width: 20vmin
+		max-width: 8vmin
 	}
 }
 
@@ -35,6 +36,12 @@
 
 .enter {
 	opacity: 0;
-	transform: scale(0.1) rotateZ(-15deg);
+	transform: translate3d(-50%,-50%,0) scale(0.1) rotateZ(-15deg);
 	transition-delay: 0ms
+}
+
+.in {
+	opacity: 1;
+	transform: translate3d(-50%,-50%,0) scale(1) rotateZ(0deg);
+	// transition-delay: 0ms
 }

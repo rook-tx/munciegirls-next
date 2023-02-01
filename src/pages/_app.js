@@ -10,7 +10,7 @@ const inter = Bebas_Neue({
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={inter.className} style={{height: '100%'}}>
+    <div className={inter.className} style={{ height: '100%' }}>
       <Head>
         <meta name="description" content="Muncie Girls rawk" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

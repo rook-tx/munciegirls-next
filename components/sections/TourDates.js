@@ -5,39 +5,9 @@ import { useEffect, useState } from 'react'
 import styles from './TourDates.module.scss'
 import Songkick from 'components/svg/Songkick'
 
-export default function TourDates() {
-  const [ dates, setDates ] = useState([])
+export default function TourDates({ dates }) {
 
-  const artistUrl = 'https://www.songkick.com/artists/10082157-lande-hekt'
-  const artistId = 10082157
-  const apiKey = 'FwkcBPF5yvACSkxK'
-  const reqUrl = `https://api.songkick.com/api/3.0/artists/${artistId}/calendar.json?apikey=${apiKey}`
-
-  async function jet(url) {
-    const data = await fetch(url)
-    const res = await data.json()
-    return res
-  }
-
-  useEffect(() => {
-    jet(reqUrl).then(songkickDates => {
-      if (songkickDates.resultsPage) {
-        songkickDates = songkickDates.resultsPage.results.event
-
-        const newDates = []
-
-        if (songkickDates && songkickDates.length > 0) {
-          for (let i = 0; i < songkickDates.length; i++) {
-            newDates.push(songkickDates[i])
-          }
-        } else {
-          console.log(songkickDates)
-        }
-
-        setDates(newDates)
-      }
-    })
-  }, [ reqUrl ])
+  const artistUrl = 'https://www.songkick.com/artists/4326711-muncie-girls'
 
   return (
     <div className={styles.listing}>
@@ -52,7 +22,7 @@ export default function TourDates() {
         }
       </ol>
 
-      { dates.length < 0 &&
+      { dates.length < 1 &&
         <h2 className={styles['no-dates']}>{'We’ll be back soon!'}</h2>
       }
 
